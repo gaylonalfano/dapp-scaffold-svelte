@@ -1,11 +1,3 @@
-<script context="module" lang="ts">
-	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-	// import { Buffer } from 'buffer';
-
-	// globalThis.Buffer = Buffer;
-</script>
-
 <script lang="ts">
 	import { clusterApiUrl } from '@solana/web3.js';
 	import { WalletProvider, ConnectionProvider } from '@svelte-on-solana/wallet-adapter-ui';
@@ -32,7 +24,7 @@
 		new SolflareWalletAdapter(),
 		new SolletWalletAdapter({ network: endpoint }),
 		new SolletExtensionWalletAdapter({ network: endpoint }),
-		new TorusWalletAdapter(),
+		new TorusWalletAdapter()
 	];
 
 	$: autoConnect = browser && Boolean(getLocalStorage('autoconnect', false));
