@@ -11,7 +11,10 @@ const config = {
 		'process.env.VERSION': JSON.stringify(process.env.npm_package_version)
 	},
 	optimizeDeps: {
-		include: ['@solana/web3.js', 'buffer']
+		include: ['@solana/web3.js', 'buffer'],
+		esbuildOptions: {
+			target: 'esnext'
+		}
 	},
 	resolve: {
 		alias: {
@@ -19,6 +22,7 @@ const config = {
 		}
 	},
 	build: {
+		target: 'esnext',
 		rollupOptions: {
 			plugins: [inject({ Buffer: ['buffer', 'Buffer'] })]
 		}
