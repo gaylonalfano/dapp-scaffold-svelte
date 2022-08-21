@@ -1,7 +1,9 @@
 <script context="module" lang="ts">
-	import { Buffer } from 'buffer';
+	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
 
-	globalThis.Buffer = Buffer;
+	// import { Buffer } from 'buffer';
+
+	// globalThis.Buffer = Buffer;
 </script>
 
 <script lang="ts">
